@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+
+	<name>COM_JMS</name>
+	<author>Infoweblink</author>
+	<creationDate>Sept 2011</creationDate>
+	<copyright>Copyright (C) 2013 Infoweblink. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@infoweblink.com</authorEmail>
+	<authorUrl>http://www.joomlamadesimple.com/</authorUrl>
+	<version>2.5-2.2.0</version>
+	<description>This component manages Subscriptions for members to access to Joomla Resource.</description>
+	
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>jms.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	
+	<languages folder="languages/site">
+		<language tag="en-GB">en-GB.com_jms.ini</language>
+	</languages>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_jms/assets/images/icon-16-component.png">COM_JMS_COMPONENT</menu>
+		
+		<submenu>
+			<menu link="option=com_jms" view="jms" img="components/com_jms/assets/images/icon-16-config.png" alt="Jms/Plans">COM_JMS_CONTROL_PANEL</menu>
+			<menu link="option=com_jms&amp;view=plans" view="plans" img="components/com_jms/assets/images/icon-16-plan.png" alt="Jms/Plans">COM_JMS_PLANS</menu>
+			<menu link="option=com_jms&amp;view=subscrs" view="subscrs" img="components/com_jms/assets/images/icon-16-subscriber.png" alt="Jms/Subscrs">COM_JMS_SUBSCRS</menu>
+			<menu link="option=com_jms&amp;view=coupons" view="coupons" img="components/com_jms/assets/images/icon-16-coupon.png" alt="Jms/Coupons">COM_JMS_COUPONS</menu>
+			<menu link="option=com_jms&amp;view=categories" view="categories" img="components/com_jms/assets/images/icon-16-category.png" alt="Jms/Categories">COM_JMS_CATEGORIES</menu>
+			<menu link="option=com_jms&amp;view=products" view="products" img="components/com_jms/assets/images/icon-16-product.png" alt="Jms/Products">COM_JMS_PRODUCTS</menu>
+			<menu link="option=com_jms&amp;view=sales" view="sales" img="" alt="">COM_JMS_SALES</menu>
+			<menu link="option=com_jms&amp;view=downloads" view="downloads" img="components/com_jms/assets/images/icon-16-download.png" alt="Jms/Downloads">COM_JMS_DOWNLOADS</menu>
+			<menu link="option=com_jms&amp;view=vouchers" view="vouchers" img="components/com_jms/assets/images/icon-16-voucher.png" alt="Jms/Vouchers">COM_JMS_VOUCHERS</menu>
+			<menu link="option=com_jms&amp;view=salesvoucher" view="sales" img="" alt="">COM_JMS_SALES_VOUCHER</menu>
+			<menu link="option=com_jms&amp;view=about" view="about" img="components/com_jms/assets/images/icon-16-about.png" alt="Jms/Subscrs">COM_JMS_ABOUT</menu>
+        </submenu>
+		
+		<files folder="admin">
+			<!-- Site Main File Copy Section -->
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>jms.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		
+		<languages folder="languages/admin">
+			<language tag="en-GB">en-GB.com_jms.ini</language>
+			<language tag="en-GB">en-GB.com_jms.sys.ini</language>
+		</languages>		
+		
+	</administration>
+	
+	<installfile>install.php</installfile>
+	<uninstallfile>uninstall.php</uninstallfile>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="JMS Updates">http://www.joomlasubscriptionsites.com/jms_j17_updates.xml</server>
+	</updateservers>
+	
+</extension>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_jms/models/fields">
+	
+        <field name="title" type="text" label="COM_JMS_DOWNLOADS_TITLE_LABEL"
+               description="COM_JMS_DOWNLOADS_TITLE_DESC" class="inputbox" size="31"
+               required="true" />
+
+        <field name="alias" type="text" label="COM_JMS_DOWNLOADS_ALIAS_LABEL"
+               description="COM_JMS_DOWNLOADS_ALIAS_DESC" class="inputbox" size="45" />
+        
+        <field name="access" type="accesslevel" label="COM_JMS_DOWNLOADS_ACCESS_LABEL"
+               description="COM_JMS_DOWNLOADS_ACCESS_DESC" class="inputbox" size="1" />
+				
+        <field name="description" type="editor" class="inputbox"
+               label="COM_JMS_DOWNLOADS_DESCRIPTION_LABEL" description="COM_JMS_DOWNLOADS_DESCRIPTION_DESC"
+               filter="safehtml" buttons="true" />
+        
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field> 
+
+        <field name="id" type="hidden" default="0" readonly="true" class="readonly" /> 
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+    </fieldset>
+
+       
+    <fields name="link">
+        <field name="local_link_radio"
+               type="radio"
+               default="0"
+               label="COM_JMS_DOWNLOAD_FIELD_LOCAL_LINK_RADIO_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_LOCAL_LINK_RADIO_DESC" >
+            <option value="0" onclick="setvalue();">No</option>
+            <option value="1">Yes</option>
+        </field>
+        <field name="local_link"
+               type="jcmedia"
+               label="COM_JMS_DOWNLOAD_FIELD_LOCAL_LINK_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_LOCAL_LINK_DESC" />
+            
+        <field
+            name="spacer1"
+            type="spacer"
+            hr="true" />
+        <field name="external_link_radio"
+               type="radio"
+               default="0"
+               label="COM_JMS_DOWNLOAD_FIELD_EXTERNAL_LINK_RADIO_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_EXTERNAL_LINK_RADIO_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+        <field name="external_link"
+               type="text"
+               size="40"
+               label="COM_JMS_DOWNLOAD_FIELD_EXTERNAL_LINK_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_EXTERNAL_LINK_DESC" />
+        <field
+            name="protected1" />
+        <field name="download_username"
+               type="text"
+               label="COM_JMS_DOWNLOAD_FIELD_DOWNLOAD_USERNAME_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_DOWNLOAD_USERNAME_DESC"
+               class="inputbox"
+               size="40" />
+        <field name="download_password"
+               type="password"
+               label="COM_JMS_DOWNLOAD_FIELD_DOWNLOAD_PASSWORD_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_DOWNLOAD_PASSWORD_DESC"
+               class="inputbox"
+               size="40" />
+            
+        <field
+            name="spacer2"
+            type="spacer"
+            hr="true" />
+        
+        <field name="amazon_s3_link_radio"
+               type="radio"
+               default="0"
+               label="COM_JMS_DOWNLOAD_FIELD_AMAZON_S3_LINK_RADIO_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_AMAZON_S3_LINK_RADIO_DESC" >
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+        <field name="amazon_s3_link"
+               type="text"
+               size="40"
+               label="COM_JMS_DOWNLOAD_FIELD_AMAZON_S3_LINK_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_AMAZON_S3_LINK_DESC" />
+        <field
+            name="protected2" />
+        <field name="access_key"
+               type="text"
+               label="COM_JMS_DOWNLOAD_FIELD_ACCESS_KEY_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_ACCESS_KEY_DESC"
+               class="inputbox"
+               size="40" />
+        <field name="secret_key"
+               type="text"
+               label="COM_JMS_DOWNLOAD_FIELD_SECRET_KEY_LABEL"
+               description="COM_JMS_DOWNLOAD_FIELD_SECRET_KEY_DESC"
+               class="inputbox"
+               size="40" />
+      
+    </fields>
+</form>

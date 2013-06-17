@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="payment_settings">
+		<fieldset name="authnet" description="" label="COM_JMS_CONFIG_PAYMENT_SETTINGS" addpath="/administrator/components/com_jms/models/fields">
+			
+			<field type="spacer" label="&lt;strong&gt;Authorize.Net&lt;/strong&gt;" />
+			
+			<field name="authnet_mode" type="list" label="COM_JMS_CFG_AUTHNET_MODE" description="COM_JMS_CFG_AUTHNET_MODE" class="inputbox" size="1" default="0">
+					<option value="0">Test Mode</option>
+					<option value="1">Live Mode</option>
+			</field>
+			
+			<field name="x_login" type="text" label="COM_JMS_CFG_AUTHNET_LOGIN" description="COM_JMS_CFG_AUTHNET_LOGIN" size="50" />
+			
+			<field name="x_tran_key" type="text" default="" label="COM_JMS_CFG_AUTHNET_TRAN_KEY" description="COM_JMS_CFG_AUTHNET_TRAN_KEY" size="50" />
+			
+			<field name="iwl_authnet_type" type="hidden" default="1" value="1" />
+			<field name="iwl_authnet_custom" type="hidden" default="0" value="0" />
+			
+			<field type="spacer" hr="true" />
+			
+		</fieldset>
+	</fields>
+</form>

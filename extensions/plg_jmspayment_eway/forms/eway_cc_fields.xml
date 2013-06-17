@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields>
+		<fieldset name="eway_cc_fields" description="" label="COM_JMS_CONFIG_PAYMENT_SETTINGS" addpath="/administrator/components/com_jms/models/fields">
+						
+			<field name="eway_card_holder_name" type="text" default="" label="COM_JMS_EWAY_CARD_HOLDER_NAME" description="COM_JMS_EWAY_CARD_HOLDER_NAME" size="30" required="true" class="inputbox" />
+			<field name="eway_card_num" type="text" default="" label="COM_JMS_EWAY_CARD_NUMBER" description="COM_JMS_EWAY_CARD_NUMBER" size="30" validate="numeric" required="true" class="inputbox" />
+			<field name="eway_exp_date" type="text" default="" label="COM_JMS_EWAY_CARD_EXPIRY_DATE" description="COM_JMS_EWAY_CARD_EXPIRY_DATE" size="20" required="true" class="inputbox" />
+			<field name="eway_card_code" type="text" default="" label="COM_JMS_EWAY_CARD_CODE" description="COM_JMS_EWAY_CARD_CODE" validate="numeric" size="20" required="true" class="inputbox" />
+			
+		</fieldset>
+	</fields>
+</form>

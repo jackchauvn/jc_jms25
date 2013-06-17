@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content" method="upgrade">
+
+	<name>Content - JMS Membership Sites - Utilities</name>
+	<author>Infoweblink</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2011 Infoweblink. All RIghts Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@infoweblink.com</authorEmail>
+	<authorUrl>http://www.joomlamadesimple.com/</authorUrl>
+	<version>2.5-2.1.0</version>
+	<description>JMS Membership Sites content plugin to load registration with subscription or login form into an article</description>
+	
+	<files>
+		<filename plugin="jmsutilities">jmsutilities.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+	</config>
+	
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jmsutilities.ini</language>
+	</languages>
+	
+</extension>

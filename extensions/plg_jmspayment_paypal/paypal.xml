@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="jmspayment" method="upgrade">
+
+    <name>JMSPAYMENT_PAYPAL</name>
+    <author>Infoweblink</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2011 Infoweblink. All RIghts Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@infoweblink.com</authorEmail>
+	<authorUrl>http://www.joomlamadesimple.com/</authorUrl>
+    <version>2.5-2.4.0</version>
+	
+    <description>
+		<![CDATA[<a href="http://paypal.com" target="_blank">PayPal</a> is a popular payment provider and available in many countries. ]]>
+    </description>
+
+    <files>
+		<filename plugin="paypal">paypal.php</filename>
+		<filename>index.html</filename>
+		<folder>paypal</folder>
+		<folder>forms</folder>
+    </files>
+	
+    <languages>
+		<language tag="en-GB">en-GB.plg_jmspayment_paypal.ini</language>
+		<language tag="en-GB">en-GB.plg_jmspayment_paypal.sys.ini</language>
+    </languages>
+	
+    <config>
+	</config>
+
+</install>

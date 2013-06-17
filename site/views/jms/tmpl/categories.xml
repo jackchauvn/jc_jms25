@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JMS_VIEW_CATEGORIES_TITLE">
+		<message>![CDATA[COM_JMS_VIEW_CATEGORIES_DESC]]</message>
+	</layout>
+        
+        <!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_jms/models/fields">
+
+                        
+		</fieldset>
+         </fields>       
+</metadata>

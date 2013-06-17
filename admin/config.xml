@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+
+    <fieldset name="general_settings"
+              description=""
+              label="COM_JMS_CONFIG_GENERAL_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field
+            name="payment_method"
+            type="paymentmethod" class="inputbox"
+            label="COM_JMS_CFG_PAYMENT_METHOD_LABEL"
+            size="5"
+            multiple="true"
+            description="">
+            <option value="0">Select Payment Method</option>
+        </field>
+		
+        <field name="enable_autologin" type="radio" default="0" label="COM_JMS_CFG_AUTOLOGIN_LABEL" description="COM_JMS_CFG_AUTOLOGIN_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+				
+        <field name="custom_registration_page"
+               type="sql"
+               default=""
+               size="1"
+               label="COM_JMS_CFG_CUSTOM_REGISTRATION_PAGE_LABEL"
+               query="SELECT id, title FROM #__content ORDER By title"
+               key_field="id"
+               value_field="title"
+               description="COM_JMS_CUSTOM_REGISTRATION_PAGE_DESC"
+               class="inputbox">
+            <option value="">-- Default --</option>
+        </field>
+		
+        <field name="terms_link" type="text" default="Terms and Conditions" label="COM_JMS_CFG_TERMS_CONDITIONS_LINK_LABEL" description="COM_JMS_CFG_TERMS_CONDITIONS_LINK_DESC" size="60" />
+		
+        <field name="terms_conditions"
+                       type="sql"
+                       default=""
+                       size="1"
+                       label="COM_JMS_CFG_TERMS_CONDITIONS_PAGE_LABEL"
+                       query="SELECT id, title FROM #__content ORDER By title"
+                       key_field="id"
+                       value_field="title"
+                       description="COM_JMS_TERMS_CONDITIONS_PAGE_DESC"
+                       class="inputbox">
+            <option value="">-- Select Page --</option>
+        </field>
+		
+        <field name="currency_sign" type="text" default="$" label="COM_JMS_CFG_CURRENCY_SIGN_LABEL" description="COM_JMS_CFG_CURRENCY_SIGN_DESC" size="10" />
+		
+        <field name="notification_emails" type="text" default="" label="COM_JMS_CFG_NOTIFICATION_EMAILS_LABEL" description="COM_JMS_CFG_NOTIFICATION_EMAILS_DESC" size="60" />
+		
+        <field name="admin_email_subject" type="text" default="New Subscription" label="COM_JMS_CFG_ADMIN_EMAIL_SUBJECT_LABEL" description="COM_JMS_CFG_ADMIN_EMAIL_SUBJECT_DESC" size="60" />
+        <field type="spacer" hr="false" />
+        <field name="admin_email_body" type="editor" filter="safehtml" label="COM_JMS_CFG_ADMIN_EMAIL_BODY_LABEL" description="COM_JMS_CFG_ADMIN_EMAIL_BODY_DESC" width="600" buttons="false" />
+		
+        <field name="user_email_subject" type="text" default="" label="COM_JMS_CFG_USER_EMAIL_SUBJECT_LABEL" description="COM_JMS_CFG_USER_EMAIL_SUBJECT_DESC" size="60" />
+
+        <field type="spacer" hr="false" />
+        <field name="user_email_body" type="editor" filter="safehtml" label="COM_JMS_CFG_USER_EMAIL_BODY_LABEL" description="COM_JMS_CFG_USER_EMAIL_BODY_DESC" width="600" buttons="false" />
+		
+        <field name="admin_recurring_email_subject" type="text" default="" label="COM_JMS_CFG_ADMIN_RECURRING_EMAIL_SUBJECT_LABEL" description="COM_JMS_CFG_ADMIN_RECURRING_EMAIL_SUBJECT_DESC" size="60" />
+        <field type="spacer" hr="false" />
+        <field name="admin_recurring_email_body" type="editor" filter="safehtml" label="COM_JMS_CFG_ADMIN_RECURRING_EMAIL_BODY_LABEL" description="COM_JMS_CFG_ADMIN_RECURRING_EMAIL_BODY_DESC" width="600" buttons="false" />
+		
+        <field name="user_recurring_email_subject" type="text" default="" label="COM_JMS_CFG_USER_RECURRING_EMAIL_SUBJECT_LABEL" description="COM_JMS_CFG_USER_RECURRING_EMAIL_SUBJECT_DESC" size="60" />
+        <field type="spacer" hr="false" />
+        <field name="user_recurring_email_body" type="editor" filter="safehtml" label="COM_JMS_CFG_USER_RECURRING_EMAIL_BODY_LABEL" description="COM_JMS_CFG_USER_RECURRING_EMAIL_BODY_DESC" width="600" buttons="false" />
+		
+        <field type="spacer" hr="false" />
+        <field name="completed_msg" type="editor" filter="safehtml" label="COM_JMS_CFG_COMPLETED_MSG_LABEL" description="COM_JMS_CFG_COMPLETED_MSG_DESC" width="600" buttons="false" />
+		
+        <field type="spacer" hr="false" />
+        <field name="cancel_msg" type="editor" filter="safehtml" label="COM_JMS_CFG_CANCEL_MSG_LABEL" description="COM_JMS_CFG_CANCEL_MSG_DESC" width="600" buttons="false" />
+
+    </fieldset>
+	
+    <fieldset name="payment_settings"
+                  description=""
+                  label="COM_JMS_CONFIG_PAYMENT_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field name="payment_settings" type="paymentsettings" label="" />
+		
+    </fieldset>
+	
+    <fieldset name="layout_settings"
+                  description=""
+                  label="COM_JMS_CONFIG_LAYOUT_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field name="show_available_plans_to_guest" type="radio" default="0" label="COM_JMS_CFG_SHOW_PLANS_TO_GUEST_LABEL" description="COM_JMS_CFG_SHOW_PLANS_TO_GUEST_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+		
+        <field name="login_form_title" type="text" class="inputbox" label="COM_JMS_CFG_LOGIN_FORM_TITLE_LABEL" size="80" description="COM_JMS_CFG_LOGIN_FORM_TITLE_DESC" />
+        <field type="spacer" hr="false" />
+        <field name="login_form_text" type="editor" filter="safehtml" label="COM_JMS_CFG_LOGIN_FORM_TEXT_LABEL" description="COM_JMS_CFG_LOGIN_FORM_TEXT_DESC" width="600" buttons="false" />
+		
+        <field name="subscription_page_title" type="text" class="inputbox" label="COM_JMS_CFG_SUBSCRIPTION_PAGE_TITLE_LABEL" size="80" description="COM_JMS_CFG_SUBSCRIPTION_PAGE_TITLE_DESC" />
+        <field type="spacer" hr="false" />
+        <field name="subscription_page_text" type="editor" filter="safehtml" label="COM_JMS_CFG_SUBSCRIPTION_PAGE_TEXT_LABEL" description="COM_JMS_CFG_SUBSCRIPTION_PAGE_TEXT_DESC" width="600" buttons="false" />
+		
+        <field name="history_page_title" type="text" class="inputbox" label="COM_JMS_CFG_HISTORY_PAGE_TITLE_LABEL" size="80" description="COM_JMS_CFG_HISTORY_PAGE_TITLE_DESC" />
+        <field type="spacer" hr="false" />
+        <field name="history_page_text" type="editor" filter="safehtml" label="COM_JMS_CFG_HISTORY_PAGE_TEXT_LABEL" description="COM_JMS_CFG_HISTORY_PAGE_TEXT_DESC" width="600" buttons="false" />
+		
+    </fieldset>
+	
+    <fieldset name="mailchimp_settings"
+                  description=""
+                  label="COM_JMS_CONFIG_MAILCHIMP_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field name="mc_enable" type="radio" default="0" label="COM_JMS_CFG_ENABLE_MAILCHIMP_LABEL" description="">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+		
+        <field name="mc_api" type="mcapi" class="inputbox" label="COM_JMS_CFG_MC_APIKEY_LABEL" size="50" description="" />
+		
+        <field
+            name="mc_listid"
+            type="listid" class="inputbox"
+                                      label="COM_JMS_CFG_MC_LISTID_LABEL"
+                                      size="1"
+                                      description="">
+            <option value="0">Select a List</option>
+        </field>
+		
+        <field name="mc_groupid" type="text" class="inputbox" label="COM_JMS_CFG_MC_GROUPS_LABEL" size="50" description="" />
+		
+    </fieldset>
+	
+    <fieldset name="plugin_settings"
+                  description=""
+                  label="COM_JMS_CONFIG_PLUGIN_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field name="se" type="list" default="1" label="COM_JMS_CONFIG_ALLOW_USER_AGENT_SKIP_LABEL" description="COM_JMS_CONFIG_ALLOW_USER_AGENT_SKIP_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+	
+        <field name="bots" cols="40" rows="10" type="textarea" default="googlebot|mediapartners-google|yahoo-verticalcrawler|yahoo! slurp|yahoo-mm|inktomi|slurp|iltrovatore-setaccio|fast-webcrawler|msnbot|ask jeeves|teoma|scooter|psbot|openbot|ia_archiver|almaden|baiduspider|zyborg|gigabot|naverbot|surveybot|boitho.com-dc|objectssearch|answerbus|nsohu-search" label="COM_JMS_CONFIG_USER_AGENT_TO_SKIP_LABEL" filter="raw" description="COM_JMS_CONFIG_USER_AGENT_TO_SKIP_DESC" />
+				
+        <field name="mark" type="radio" default="1" label="COM_JMS_CONFIG_MARK_SUSCRIBE_ARTICLES_WITH_SIGN_LABEL" description="COM_JMS_CONFIG_MARK_SUSCRIBE_ARTICLES_WITH_SIGN_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+				
+        <field name="link" type="radio" default="1" label="COM_JMS_CONFIG_MARK_AS_LINK_LABEL" description="COM_JMS_CONFIG_MARK_AS_LINK_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+				
+        <field name="mark_type" type="list" default="2" label="COM_JMS_CONFIG_WHERE_TO_PLACE_SIGN_LABEL" description="COM_JMS_CONFIG_WHERE_TO_PLACE_SIGN_DESC">
+            <option value="0">Title (before text)</option>
+            <option value="1">Title (after text)</option>    	
+            <option value="2">Intro (before text)</option>
+            <option value="3">Intro (after text)</option>
+        </field>
+				
+        <field name="pic" type="text" size="50" default="components/com_jms/assets/images/sign.gif" label="COM_JMS_CONFIG_SUBSCRIPTION_SIGN_LABEL" description="COM_JMS_CONFIG_SUBSCRIPTION_SIGN_DESC" />
+				
+        <field name="pic_text" type="text" size="50" default="" label="COM_JMS_CONFIG_PLACE_TEXT_AFTER_IMG_LABEL" description="COM_JMS_CONFIG_PLACE_TEXT_AFTER_IMG_DESC" />
+				
+        <field name="regpic" type="text" size="50" default="components/com_jms/assets/images/access.gif" label="COM_JMS_CONFIG_SUBSCRIPTION_SIGN_FOR_REGISTERED_USER_LABEL" description="COM_JMS_CONFIG_SUBSCRIPTION_SIGN_FOR_REGISTERED_USER_DESC" />   
+				 
+        <field name="regpic_text" type="text" size="50" default="" label="COM_JMS_CONFIG_PLACE_TEXT_AFTER_IMAGE_FOR_REGISTERED_USER_LABEL" description="COM_JMS_CONFIG_PLACE_TEXT_AFTER_IMAGE_FOR_REGISTERED_USER_DESC" />
+		
+        <field name="subscribe_btn_img" type="text" default="components/com_jms/assets/images/subscribe.gif" size="60" label="COM_JMS_CONFIG_SUBSCRIBE_BUTTON_IMG_LABEL" description="COM_JMS_CONFIG_SUBSCRIBE_BUTTON_IMG_DESC" />
+				
+    </fieldset>
+	
+    <fieldset name="product_settings"
+                  description=""
+                  label="COM_JMS_CONFIG_PRODUCT_SETTINGS" addfieldpath="/administrator/components/com_jms/models/fields">
+		
+        <field name="fade_purchased_products" type="radio" default="0" label="COM_JMS_CONFIG_FADE_PURCHASED_PRODUCTS_LABEL" description="COM_JMS_CONFIG_FADE_PURCHASED_PRODUCTS_DESC">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+    </fieldset>
+
+</config>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- $Id: registration.xml 21521 2011-06-10 22:21:18Z chdemko $ -->
+<form>
+
+	<fieldset name="default" label="COM_JMS_REGISTRATION_DEFAULT_LABEL" addfieldpath="/components/com_jms/models/fields">
+		
+		<field name="sid" type="jmsplans"
+			autocomplete="off"
+			class="inputbox"
+			description="COM_JMS_AVAILABLE_PLANS"
+			label="COM_JMS_AVAILABLE_PLANS"
+			required="true"
+			size="1"
+		/>
+		
+		<field name="coupon" type="text"
+			autocomplete="off"
+			class="inputbox"
+			description="COM_JMS_LAYOUT_COUPON_TEXT"
+			label="COM_JMS_LAYOUT_COUPON_TEXT"
+			required="false"
+			size="30"
+		/>
+		
+		<field name="payment_method" type="paymentmethod"
+			autocomplete="off"
+			class="inputbox"
+			description="COM_JMS_PAYMENT_METHOD"
+			label="COM_JMS_PAYMENT_METHOD"
+			required="true"
+		/>
+		
+	</fieldset>
+</form>

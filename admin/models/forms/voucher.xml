@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_jms/models/fields">
+	
+        <field name="title" type="text" label="COM_JMS_VOUCHERS_TITLE_LABEL"
+               description="COM_JMS_VOUCHERS_TITLE_DESC" class="inputbox" size="31"
+               required="true" />
+        
+        <field name="price" type="text" label="COM_JMS_VOUCHERS_PRICE_LABEL"
+               description="COM_JMS_VOUCHERS_PRICE_DESC" class="inputbox" size="31" />
+        
+        <field name="price_points" type="text" label="COM_JMS_VOUCHERS_PRICE_POINTS_LABEL"
+               description="COM_JMS_VOUCHERS_PRICE_POINTS_DESC" class="inputbox" size="31" />
+        
+        <field name="message" type="text" label="COM_JMS_VOUCHERS_MESSAGE_LABEL"
+               description="COM_JMS_VOUCHERS_MESSAGE_DESC" class="inputbox" size="31" />
+        
+        <field name="allow_edit" 
+               type="checkbox" 
+               label="COM_JMS_VOUCHERS_ALLOW_EDIT_LABEL" 
+               description="COM_JMS_VOUCHERS_ALLOW_EDIT_DESC" 
+               default="" 
+               class="inputbox" 
+               value="1" />
+
+        <field name="description" type="editor" class="inputbox"
+               label="COM_JMS_VOUCHERS_DESCRIPTION_LABEL" description="COM_JMS_VOUCHERS_DESCRIPTION_DESC"
+               filter="safehtml" buttons="true" />
+        
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field> 
+
+        <field name="id" type="hidden" default="0" readonly="true" class="readonly" /> 
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+        
+    </fieldset>
+
+</form>

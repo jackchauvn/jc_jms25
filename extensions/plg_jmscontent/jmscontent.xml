@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="content" method="upgrade">
+
+	<name>Content - JMS Membership Sites - Content Restrictions</name>
+	<author>Infoweblink</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2011 Infoweblink. All RIghts Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@infoweblink.com</authorEmail>
+	<authorUrl>http://www.joomlamadesimple.com/</authorUrl>
+	<version>2.5-2.1.0</version>
+	<description>JMS Membership Sites Plugin to controll access to content</description>
+	
+	<files>
+		<filename plugin="jmscontent">jmscontent.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>

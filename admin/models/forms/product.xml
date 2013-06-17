@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_jms/models/fields">
+	
+        <field name="title" type="text" label="COM_JMS_PRODUCT_TITLE_LABEL"
+               description="COM_JMS_PRODUCT_TITLE_DESC" class="inputbox" size="31"
+               required="true" />
+
+        <field name="alias" type="text" label="COM_JMS_PRODUCT_ALIAS_LABEL"
+               description="COM_JMS_PRODUCT_ALIAS_DESC" class="inputbox" size="45" />
+
+        <field name="item_number" type="text" label="COM_JMS_PRODUCT_ITEM_NUMBER_LABEL"
+               description="COM_JMS_PRODUCT_ITEM_NUMBER_DESC" class="inputbox" size="45" />
+
+        <field name="tags" type="text" label="COM_JMS_PRODUCT_TAGS_LABEL"
+               description="COM_JMS_PRODUCT_TAGS_DESC" class="inputbox" size="45" />
+        
+        <field name="price" type="text" label="COM_JMS_PRODUCT_PRICE_LABEL"
+               description="COM_JMS_PRODUCT_PRICE_DESC" class="inputbox" />
+        
+        <field name="price_points" type="text" label="COM_JMS_PRODUCT_PRICE_POINTS_LABEL"
+               description="COM_JMS_PRODUCT_PRICE_POINTS_DESC" class="inputbox" />
+        
+        <field name="access" type="accesslevel" label="COM_JMS_PRODUCT_ACCESS_LABEL"
+               description="COM_JMS_PRODUCT_ACCESS_DESC" class="inputbox" size="1" />
+        
+        <field name="categories"
+               type="sql"
+               default=""
+               size="20"
+               multiple="true"
+               label="COM_JMS_PRODUCT_CATEGORIES_LABEL"
+               query="SELECT c.id, c.title
+                           FROM #__jms_categories AS c
+                           ORDER BY c.title"
+               key_field="id"
+               value_field="title"
+               description="COM_JMS_PRODUCT_CATEGORIES_DESC"
+               class="inputbox">
+            <option value="">------Select Categories------</option>
+        </field>
+        
+        <field name="downloads"
+               type="sql"
+               default=""
+               size="20"
+               multiple="true"
+               label="COM_JMS_PRODUCT_ADD_DOWNLOADS_LABEL"
+               query="SELECT c.id, c.title
+                           FROM #__jms_downloads AS c
+                           ORDER BY c.title"
+               key_field="id"
+               value_field="title"
+               description="COM_JMS_PRODUCT_ADD_DOWNLOADS_LABEL"
+               class="inputbox">
+            <option value="">------Select Downloads------</option>
+        </field>
+				
+        <field
+            name="state"
+            type="list"
+            label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field> 
+        
+        <field name="description" type="editor" class="inputbox"
+               label="COM_JMS_PRODUCT_DESCRIPTION_LABEL" description="COM_JMS_PRODUCT_DESCRIPTION_DESC"
+               filter="safehtml" buttons="true" />
+        
+        <field name="id" type="hidden" default="0" readonly="true" class="readonly" /> 
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+        
+        <fields name="images">
+            <field
+                name="image_intro"
+                type="media"
+                label="COM_JMS_PRODUCT_FIELD_INTRO_LABEL"
+                description="COM_JMS_PRODUCT_FIELD_INTRO_DESC" />
+            <field
+                name="float_intro"
+                type="list"
+                label="COM_JMS_PRODUCT_FLOAT_LABEL"
+                description="COM_JMS_PRODUCT_FLOAT_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="right">COM_JMS_RIGHT</option>
+                <option value="left">COM_JMS_LEFT</option>
+                <option value="none">COM_JMS_NONE</option>
+            </field>
+            <field name="image_intro_alt"
+                   type="text"
+                   label="COM_JMS_PRODUCT_FIELD_IMAGE_ALT_LABEL"
+                   description="COM_JMS_PRODUCT_FIELD_IMAGE_ALT_DESC"
+                   class="inputbox"
+                   size="20" />
+            <field name="image_intro_caption"
+                   type="text"
+                   label="COM_JMS_PRODUCT_FIELD_IMAGE_CAPTION_LABEL"
+                   description="COM_JMS_PRODUCT_FIELD_IMAGE_CAPTION_DESC"
+                   class="inputbox"
+                   size="20" />
+        </fields>
+
+    </fieldset>
+
+</form>
